@@ -9,6 +9,6 @@ class RoomsChannel < ApplicationCable::Channel
 
   def send_message(data)
     # process data sent from the page
-    current_user.messages.create!(body: data['message'], chat_room_id: data['room_id'])
+    current_user.messages.create!(body: data['message'], room_id: data['room_id'])
   end
 end
