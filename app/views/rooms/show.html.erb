@@ -6,6 +6,7 @@
 </div>
 
 <%= form_for @message, url: '#' do |f| %>
+<%= hidden_field_tag 'room_id', @room.id %>
     <%= f.label :body %>
     <%= f.text_area :body %>
 
