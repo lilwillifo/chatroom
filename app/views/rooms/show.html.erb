@@ -1,6 +1,9 @@
 <h1><%= @room.title %></h1>
 
-<%= render @room.messages %>
+
+<div id="messages" data-room-id="<%= @room.id %>">
+  <%= render @room.messages %>
+</div>
 
 <%= form_for @message, url: '#' do |f| %>
     <%= f.label :body %>
