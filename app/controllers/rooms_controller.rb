@@ -20,6 +20,7 @@ class RoomsController < ApplicationController
   def show
     # includes used for eager loading
     @room = Room.includes(:messages).find_by(id: params[:id])
+    @message = Message.new
   end
 
   private
