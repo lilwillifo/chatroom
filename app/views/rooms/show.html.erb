@@ -8,7 +8,7 @@
 
 <%= form_for @message, url: '#' do |f| %>
   <%= hidden_field_tag 'room_id', @room.id %>
-  <div class="form-group">
+  <div >
     <%= f.label :body %>
     <%= f.text_area :body %>
     <small class="text-muted">From 2 to 1000 characters</small>
